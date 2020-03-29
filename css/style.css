@@ -5,3 +5,48 @@
   1. Add Merienda Google font
 
 */
+body {
+  font-family: 'Merienda', cursive;
+}
+
+.navbar{
+  left: 40%;
+}
+
+label{
+  width: 30%;
+}
+
+button{
+  width: 30%;
+  margin-left: 10%;
+}
+
+h2{
+  background-color: Clear;
+}
+
+.card-header{
+}
+
+#user_details{
+  border: 2px solid blue;
+}
+
+#user_header{
+  background-color: blue;
+  color: white;
+}
+
+#results{
+  border: 2px solid green;
+}
+
+#print_name{
+  background-color: green;
+  color: white;
+}
+
+#quick_links{
+  border: 2px solid black;
+}
