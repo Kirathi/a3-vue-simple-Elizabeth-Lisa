@@ -5,41 +5,142 @@
     <title>I-W-C</title>
 
     <!-- @TODO : Add favicon -->
+    <link rel="icon"href="images/favicon.png" type="image/png" sizes="16x16">
 
-    <!-- @TODO : Add bootstrap -->
+        <!-- @TODO : Add bootstrap -->
+        <link rel="stylesheet"href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
 
-    <!-- @TODO : Add fontawesome Icons -->
+        <!-- @TODO : Add fontawesome Icons -->
+        <link rel="stylesheet"href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css">
 
-    <!-- @TODO : Add local stylesheet -->
+        <!-- @TODO : Add local stylesheet -->
+        <link rel="stylesheet"href="css/style.css">
 
-  </head>
-  <body>
+      </head>
+      <body>
 
-    <!-- @TODO : Add markup
+        <div class="container" id="app">
 
-      Details;
-      1. Bootstrap cards (https://getbootstrap.com/docs/4.4/components/card/)
-      2. Font awesome icons (calculator,user-alt,baby-carriage,mars-double,arrows-alt-v,thumbs-up,weight,exchange-alt and broom)
-      3. Bootstrap buttons (https://getbootstrap.com/docs/4.4/components/buttons/)
-      4. Bootstrap form inputs (https://getbootstrap.com/docs/4.4/components/forms/)
-      5. Google Fonts (Merienda)
-      6. HTML5 Validation
-      7. Bootstrap Tooltips
-    -->
+      <nav class="navbar navbar-light bg-light">
+
+           <h2><i class="fas fa-calculator" style="color: red"></i><span style="color: purple">  Ideal</span> <span style="color: orange">Weight</span> <span style="color: brown">Calculator</span></h2>
+
+      </nav>
+
+      <div class="row">
+
+          <div class="col-sm-5">
+            <div class="card" id = "user_details">
+              <div class="card-header" id = "user_header">
+                User Details
+              </div>
+              <div class="card-body">
+
+                <div class="form-group">
+                  <label for="name">
+                    <i class="fas fa-user-tag"></i>
+                    My Name
+                  </label>
+                  <input v-model = "name" type="name" id="my_name" >
+                </div>
+
+                <div class="form-group">
+                  <label for="age">
+                    <i class="fas fa-baby-carriage"></i>
+                    My Age
+                  </label>
+                  <input v-model ="age" type="number" id="my_age">
+                </div>
+
+                <div class="form-group">
+                  <label for="gender">
+                    <i class="fas fa-venus-mars"></i>
+                    My Gender
+                  </label>
+                  <select v-model = "gender" id="my_gender">
+                    <option value=""> -- Please Specify -- </option>
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                    <option value="other">Other</option>
+                  </select>
+
+                </div>
+
+                <div class="form-group">
+                  <label for="height">
+                    <i class="fas fa-arrows-alt-v"></i>
+                    My Height
+                  </label>
+                  <input v-model = "height" type="number" id="height" placeholder="CM">
+                </div>
+
+                <button v-on:click="calculate_weight" type="button" class="btn btn-success" >
+                  <i class="far fa-thumbs-up"></i>
+                  Calculate
+                </button>
+
+                <button v-on:click="resetForm" type="button" class="btn btn-warning" >
+                  <i class="fas fa-broom"></i>
+                  Clear
+                </button>
 
 
+              </div>
+            </div>
+          </div>
 
-    <!-- @TODO : Add jQuery -->
+          <div class="col-sm-4">
+            <div class="card" id = "results">
 
-    <!-- @TODO : Add Popper js -->
+              <div class="card-header" id = "print_name">My Results</div>
 
-    <!-- @TODO : Add bootstrap js-->
+              <div class="card-body">
 
-    <!-- @TODO : Add font awesome js-->
+                  <h4 class="text-primary" id="result">{{result}}</h4>
 
-    <!-- @TODO : Add VueJS(Development version) -->
+                  <h4 class="text-primary" id="range">{{range}}</h4>
 
-    <!-- @TODO : Add your script file -->
+              </div>
+            </div>
+          </div>
+
+          <div class="col-sm-3">
+            <div class="card" id = "quick_links">
+
+              <div class="card-header">
+                Quick Links
+              </div>
+              <div class="card-body">
+
+                    <a href="https://www.calculator.net/" target="_blank">1. Calculator.net</a>
+
+              </div>
+            </div>
+          </div>
+        </div>
+
+        </div>
+
+    </div> <!-- end container  -->
+
+        <!-- @TODO : Add jQuery -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+        <!-- @TODO : Add Popper js -->
+        <script src="https://unpkg.com/@popperjs/core@2"></script>
+
+        <!-- @TODO : Add bootstrap js-->
+        <script type="text/javascript" src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+
+        <!-- @TODO : Add font awesome js-->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/js/all.min.js" charset="utf-8"></script>
+
+        <!-- @TODO : Add VueJS(Development version) -->
+        <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+        <!-- @TODO : Add your script file -->
+        <script src="js/app.js" charset="utf-8"></script>
+
 
   </body>
 </html>
